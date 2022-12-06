@@ -8,8 +8,8 @@ mondat=re.split(r'[.!?]+', szoveg)
 print("Mondatok száma: ",len(mondat))
 
 #3
-#for lorem in szoveg:
-
+lorem = szoveg.replace("Lorem","LOREM")
+print(lorem)
 
 #4
 Lszam=[]
@@ -20,21 +20,15 @@ for szam in szoveg:
     elif(szam.isalnum()):
         Lszam.append(int(szam))
 
-print("Számok: ",Lszam)
-
-
-#for szam in szoveg:
-#    if(szam.isalnum()):
-#        Lszam.append(int(szam))
-#        print("Számok: ", Lszam)
-#    else:
-#        print("A szövegben nincsenek betük: ")
+print("A szövegben megtalálható számok: ",Lszam)
 
 #5
-#print("Szeretnél keresni a szövegben?")
-#keres=input("Ha igen írd be azt a szót amit keresel: ")
-#if keres in szoveg:
-#    print("A szó előfordulásain száma: ", len(keres))
+print("Szeretnél keresni a szövegben?")
+keres=input("Ha igen írd be azt a szót amit keresel: ")
+if keres in szoveg:
+    print("A szó előfordulásainak száma: ", szoveg.count(keres))
+else:
+    print(" Ez a szó nem található meg a szövegben")
 
 
 
